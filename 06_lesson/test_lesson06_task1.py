@@ -22,5 +22,6 @@ def test_dynamic_loading():
     driver.save_screenshot("screenshots/finish_screen_task1.png")
 
     assert text.text == "Hello World!"
+    f"Ожидаемый результат: 'Hello World!', фактический результат'{text.text}'"
 
     driver.quit()
