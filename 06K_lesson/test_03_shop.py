@@ -8,8 +8,9 @@ def test_color_display():
     driver = webdriver.Firefox()
     wait = WebDriverWait(driver, 10)
     driver.maximize_window()
-    driver.get\
-        ("https://www.saucedemo.com/")
+    driver.get(
+        "https://www.saucedemo.com/"
+        )
 
     username_input = driver.find_element(By.ID, "user-name")
     username_input.send_keys("standard_user")
@@ -25,16 +26,19 @@ def test_color_display():
     ))
     btn_cart_bp.click()
 
-    btn_cart_bolt = driver.find_element\
-        (By.ID, "add-to-cart-sauce-labs-bolt-t-shirt")
+    btn_cart_bolt = driver.find_element(
+        By.ID, "add-to-cart-sauce-labs-bolt-t-shirt"
+        )
     btn_cart_bolt.click()
 
-    btn_cart_labs = driver.find_element\
-        (By.ID, "add-to-cart-sauce-labs-onesie")
+    btn_cart_labs = driver.find_element(
+        By.ID, "add-to-cart-sauce-labs-onesie"
+        )
     btn_cart_labs.click()
 
-    btn_cart_cont = driver.find_element\
-        (By.CSS_SELECTOR, "[class='shopping_cart_link']")
+    btn_cart_cont = driver.find_element(
+        By.CSS_SELECTOR, "[class='shopping_cart_link']"
+        )
     btn_cart_cont.click()
 
     btn_chekout = wait.until(EC.presence_of_element_located(

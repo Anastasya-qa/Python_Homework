@@ -8,8 +8,9 @@ def test_color_display():
     driver = webdriver.Edge()
     wait = WebDriverWait(driver, 10)
     driver.maximize_window()
-    driver.get\
-        ("https://bonigarcia.dev/selenium-webdriver-java/data-types.html")
+    driver.get(
+        "https://bonigarcia.dev/selenium-webdriver-java/data-types.html"
+        )
 
     first_name_input = wait.until(EC.presence_of_element_located(
         (By.NAME, "first-name")
@@ -49,7 +50,7 @@ def test_color_display():
         (By.ID, "zip-code")
     ))
     bg_danger = zip_code_color.value_of_css_property('background-color')
-    assert bg_danger == 'rgba(248, 215, 218, 1)' in bg_danger
+    assert bg_danger == 'rgba(248, 215, 218, 1)'
 
     fields = ["first-name",
               "last-name",
@@ -63,9 +64,8 @@ def test_color_display():
 
     for field_id in fields:
         field_element = driver.find_element(By.ID, field_id)
-
-    bg_success = field_element.value_of_css_property("border-color")
-    assert bg_success == 'rgb(186, 219, 204)' in bg_success
+        bg_success = field_element.value_of_css_property("border-color")
+        assert bg_success == 'rgb(186, 219, 204)'
 
     driver.save_screenshot("screenshots/field_color_test_1.png")
 

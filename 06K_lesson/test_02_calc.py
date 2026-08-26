@@ -8,8 +8,9 @@ def test_calculator():
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 45)
     driver.maximize_window()
-    driver.get\
-        ("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
+    driver.get(
+        "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html"
+        )
 
     delay_button = wait.until(EC.presence_of_element_located(
         (By.ID, "delay")
